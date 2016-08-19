@@ -10,7 +10,7 @@ class StoreList extends Component {
     constructor() {
         super()
         this.state = {
-            distance: 500,
+            distance: 10000,
             storeCount: "Loading"
         }
     }
@@ -24,7 +24,9 @@ class StoreList extends Component {
     }
 
     onStoreSelect = (store) => {
-        // set current store and navigate
+        this.props.setCurrentStore(store)
+            .then(() => Actions.details())
+            .catch(() => alert("Opps, something didn't work correctly! Try again."))
     }
 
     onUpdateDistance = (distance) => {

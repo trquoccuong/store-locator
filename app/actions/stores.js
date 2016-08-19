@@ -17,13 +17,12 @@ function setCurrent (current) {
 
 function geocodeCoordinates (coordinates) {
     return new Promise((resolve, reject) => {
-        RNGeocoder.reverseGeocodeLocation({
-            longitude: coordinates[0],
-            latitude: coordinates[1]
-        }, function(err, [data, ...rest]) {
-            if(err) reject(err)
-            else resolve(data)
-        })
+        RNGeocoder.geocodePosition({
+            lat: coordinates[0],
+            lng: coordinates[1]
+        }).then(res => {
+            resolve(res[0])
+        }).catch(err => reject(err))
     })
 }
 

@@ -8,6 +8,10 @@ import Location from './Location'
 import StoreList from './StoreList'
 import StoreListItem from './StoreListItem'
 import StoreSearch from './StoreSearch'
+import Store from './Store'
+import StoreMap from './StoreMap'
+import StoreDetails from './StoreDetails'
+
 export {
     Home,
     GuestActions,
@@ -18,5 +22,8 @@ export {
     Location,
     StoreList,
     StoreListItem,
-    StoreSearch
+    StoreSearch,
+    Store,
+    StoreMap,
+    StoreDetails
 }
