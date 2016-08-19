@@ -1,19 +1,35 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet} from 'react-native'
+import {GuestActions} from '../components'
 
-export  default function Home() {
-    return (
-        <View style={styles.container}>
-            <Text>Hello World</Text>
-        </View>
-    )
+class Home extends Component {
+    availableActions = () => {
+        return <GuestActions />
+    }
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.heading}>Store Locator</Text>
+                <View>
+                    {this.availableActions()}
+                </View>
+            </View>
+        )
+    }
 }
 
 var styles = StyleSheet.create({
     container: {
+        flex: 1,
         alignItems: "center",
-        justifyContent: 'center',
-        backgroundColor: "#f2f2f2",
-        flex : 1
+        justifyContent: "space-around",
+        backgroundColor: '#f2f2f2',
+    },
+    heading: {
+        fontSize: 30,
+        fontWeight: "100",
     }
 })
+
+export default Home
