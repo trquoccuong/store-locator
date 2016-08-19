@@ -5,6 +5,9 @@ import Login from './Login'
 import Signup from './Signup'
 import UserActions from './UserActions'
 import Location from './Location'
+import StoreList from './StoreList'
+import StoreListItem from './StoreListItem'
+import StoreSearch from './StoreSearch'
 export {
     Home,
     GuestActions,
@@ -12,5 +15,8 @@ export {
     Login,
     Signup,
     UserActions,
-    Location
+    Location,
+    StoreList,
+    StoreListItem,
+    StoreSearch
 }

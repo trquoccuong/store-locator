@@ -5,6 +5,7 @@ import {
     Home,
     Login,
     Signup,
+    StoreList
 } from '../components/'
 
 export default function Routes () {
@@ -12,8 +13,9 @@ export default function Routes () {
         <Router>
             <Scene key="root">
                 <Scene key="home" title="Home" component={Home} initial={true} hideNavBar={true} />
-                <Scene key="login" title="Login" component={Login} hideNavBar={false}/>
+                <Scene key="login" title="Login" component={Login} hideNavBar={false} />
                 <Scene key="signup" title="Signup" component={Signup} hideNavBar={false}/>
+                <Scene key="stores" title="Stores Near Me" component={StoreList} hideNavBar={false}/>
             </Scene>
         </Router>
     )
